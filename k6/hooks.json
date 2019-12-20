@@ -1,0 +1,57 @@
+[
+  {
+    "id": "k6",
+    "execute-command": "sh",
+    "command-working-directory": "/",
+    "include-command-output-in-response": true,
+	"pass-arguments-to-command":[
+		{
+			"source": "string",
+			"name": "scripts/run.sh"
+		},
+		{
+			"source": "url",
+			"name": "postman_collection_url"
+		},
+		{
+			"source": "string",
+			"name": "--duration"
+		},
+		{
+			"source": "url",
+			"name": "duration"
+		},
+		{
+			"source": "string",
+			"name": "--vus"
+		},
+		{
+			"source": "url",
+			"name": "vus_number"
+		}
+	],
+	"pass-environment-to-command":[
+		{
+			"source": "string",
+			"envname": "K6_DATADOG_ADDR",
+			"name": "distracted_chaplygin:8125"
+		},
+		{
+			"source": "string",
+			"envname": "K6_DATADOG_NAMESPACE",
+			"name": "testjp"
+		},
+	]
+  },
+    {
+    "id": "ls",
+    "execute-command": "ls",
+    "command-working-directory": "/",
+    "pass-arguments-to-command":[
+		{
+			"source": "string",
+			"name": "-la"
+		}
+	]
+  }
+]
