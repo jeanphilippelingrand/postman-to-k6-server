@@ -34,24 +34,13 @@
 		{
 			"source": "string",
 			"envname": "K6_DATADOG_ADDR",
-			"name": "distracted_chaplygin:8125"
+			"name": "datadog-client-host:datadog-client-port"
 		},
 		{
 			"source": "string",
 			"envname": "K6_DATADOG_NAMESPACE",
-			"name": "testjp"
+			"name": "datadog-namespace"
 		},
-	]
-  },
-    {
-    "id": "ls",
-    "execute-command": "ls",
-    "command-working-directory": "/",
-    "pass-arguments-to-command":[
-		{
-			"source": "string",
-			"name": "-la"
-		}
 	]
   }
 ]
